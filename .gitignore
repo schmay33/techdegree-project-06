@@ -75,5 +75,9 @@ typings/
 # FuseBox cache
 .fusebox/
 
-#node-modules
-node_modules
+#mockups
+mockups/
+
+#examlpe-html
+example-html/
+
