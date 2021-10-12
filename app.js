@@ -1,6 +1,9 @@
 // Import Express and set up the app
 const express = require('express');
+const pug = require('pug');
 const app = express();
+// Set view engine to pug
+app.set('view engine', 'pug');
 
 // Import routes
 const routes = require('./routes');
@@ -18,7 +21,7 @@ app.use(routes);
 app.use(errorHandlers.handleFourOhFour);
 app.use(errorHandlers.handleGlobalError);
 
-// Turn on Express server
+// Start Express server
 app.listen(3000, () => {
-  console.log('Server listening on port 3000');
+  console.log('The server is now listening on port 3000');
 });
