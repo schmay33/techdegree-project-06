@@ -2,6 +2,7 @@
 const express = require('express');
 const pug = require('pug');
 const app = express();
+
 // Set view engine to pug
 app.set('view engine', 'pug');
 

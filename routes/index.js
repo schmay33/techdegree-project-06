@@ -2,11 +2,13 @@ const express = require('express');
 const router = express.Router();
 const { projects } = require('../data.json');
 
+// Default Router
 router.get('/', (req, res) => {
     res.locals.projects = projects;
     res.render('index');
 });
 
+// Router for projects with id
 router.get('/project/:id', (req, res) => {
     if (projects[req.params.id]) {
         res.locals.project = projects[req.params.id];
@@ -20,15 +22,18 @@ router.get('/project/:id', (req, res) => {
     }
 });
 
+// Redirect projects to project
 router.get('/projects/', (req, res) => {
     res.redirect('project/');
 });
 
+// Redirect projects to project
 router.get('/projects/:id', (req, res) => {
     const id = req.params.id;
     res.redirect(`/project/${id}`);
 });
 
+// Router for the about page
 router.get('/about', (req, res) => {
     res.render('about');
 });
@@ -44,4 +49,5 @@ router.get('/error', (req, res) => {
     throw err;
 });
 
+// Export the router
 module.exports = router;
