@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+
+  nav.nav
+    a(href='/')
+      span &larr;
+      |  Back
+
+  article.portfolio-projects
+    .inner-wrapper.flex-row-wrap.one-col
+      .project-info-box.box
+
+        h1 There was an error on the page:
+        p= message
+        p= error.status 
+        p= error.stack

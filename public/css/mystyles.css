@@ -1,0 +1,11 @@
+article, .wrapper, .box {
+    background: lightgrey;
+}
+
+p, h1, article {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cell img {
+    box-shadow: 2px 2px 2px black;
+}

@@ -12,7 +12,7 @@ const routes = require('./routes');
 const errorHandlers = require('./errorHandlers');
 
 // Add Static 
-app.use(express.static('public'));
+app.use('/static', express.static('public'));
 
 // Pass route handlers to the app
 app.use(routes);
